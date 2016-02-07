@@ -1,12 +1,19 @@
 {
-    "name": "rss-parser",
-    "version": "0.0.1",
-    "description": "",
-    "main": "index.js",
-    "author": "Daniel Ilkovich",
-    "license": "ISC",
-    "private": true,
-    "dependencies": {
-        "lodash": "^3.9.3"
-    }
+  "name": "rss-parser",
+  "version": "0.0.1",
+  "description": "Parse an RSS feed for processing",
+  "main": "index.js",
+  "author": "Daniel Ilkovich",
+  "license": "ISC",
+  "private": true,
+  "repository": {
+     "type" : "url",
+     "url"  : "https://github.com/rundexter/rss-parser"
+  },
+  "dependencies": {
+     "feedparser" : "^1.1.4",
+     "lodash"     : "^3.10.1",
+     "q"          : "^1.4.1",
+     "request"    : "^2.69.0"
+  }
 }
