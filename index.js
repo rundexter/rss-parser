@@ -26,7 +26,7 @@ module.exports = {
               , deferred = q.defer()
             ;
 
-            self.log('Processing URL');
+            self.log('Processing URL '+url);
             
             req.on('error', function (error) {
                 return deferred.reject(error);
@@ -71,8 +71,8 @@ module.exports = {
         });
 
         q.all(connections)
-            .then(this.complete.bind(this, results))
-            .then(this.fail.bind(this))
+            .then(this.complete.bind(this,results))
+            .catch(this.fail.bind(this))
         ;
     }
 };

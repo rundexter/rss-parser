@@ -9,20 +9,16 @@
     }],
     "outputs": [{
         "id": "url",
-        "title":"Article URL",
-        "type":"string"
+        "title":"Article URL"
     }, {
         "id": "title",
-        "title":"Article title",
-        "type":"string"
+        "title":"Article title"
     }, {
         "id": "summary",
-        "title":"Article summary",
-        "type":"string"
+        "title":"Article summary"
     }, {
         "id": "author",
-        "title":"Author",
-        "type":"string"
+        "title":"Author"
     }],
     "icon" : "rss",
     "title": "RSS Parser" /* Required.A display name for the module */
