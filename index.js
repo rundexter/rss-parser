@@ -56,11 +56,10 @@ module.exports = {
               ;
 
               while (( item = stream.read() ) && i++ < maxResults) {
-
                 results.push({
                     url       : item.link
                     , title   : item.title
-                    , summary : item.summary
+                    , summary : item.summary || item.description || _.get(item, 'media:group.media:description.#')
                     , author  : item.author
                 });
 
