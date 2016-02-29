@@ -16,6 +16,7 @@ module.exports = {
           , self        = this
           , connections = []
           , results     = []
+          , maxResults  = step.input('max_results').first()
         ;
 
         if(!urls.length) return self.fail('At least one url is required');
@@ -24,6 +25,7 @@ module.exports = {
             var req = request(url)
               , fp  = new FeedParser()
               , deferred = q.defer()
+              , i = 0
             ;
 
             self.log('Processing URL '+url);
@@ -53,13 +55,15 @@ module.exports = {
                 , item
               ;
 
-              while (( item = stream.read() )) {
+              while (( item = stream.read() ) && i++ < maxResults) {
+
                 results.push({
                     url       : item.link
                     , title   : item.title
                     , summary : item.summary
                     , author  : item.author
                 });
+
               }
             });
 

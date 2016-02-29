@@ -4,8 +4,11 @@
 {
     "inputs": [{
         "id": "url",
-        "title":"Feed URL",
-        "type":"string"
+        "title":"Feed URL"
+    }, {
+        "id": "max_results",
+        "title": "Max Results",
+        "description": "Number of results to retrieve from each URL"
     }],
     "outputs": [{
         "id": "url",
