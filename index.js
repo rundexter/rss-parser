@@ -55,7 +55,7 @@ module.exports = {
                 , item
               ;
 
-              while (( item = stream.read() ) && i++ < maxResults) {
+              while (( item = stream.read() ) && (maxResults === null || i++ < maxResults)) {
                 results.push({
                     url       : item.link
                     , title   : item.title
